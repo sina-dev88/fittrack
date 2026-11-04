@@ -1,120 +1,278 @@
-# FitTrack
+# FitTrack 🏋️
 
-**A bilingual fitness and workout tracking platform built with Next.js.**
+**A bilingual fitness and workout tracking platform built with Next.js, TypeScript, Prisma, and Supabase.**
 
-FitTrack helps users organize their training, record workout performance, explore exercises, and review progress in one place. The interface supports English and Persian, including right-to-left layouts.
+FitTrack is a fitness platform designed to help users plan workouts, track training performance, explore exercises, and monitor their fitness progress. It provides a bilingual interface in English and Persian, with full right-to-left (RTL) layout support.
 
-> **Project status:** The core fitness experience is under active development. The AI Coach section is currently a *Coming Soon* placeholder and does not provide AI-generated coaching yet.
+🌐 **Live Demo:** [https://fittrack-eta-six.vercel.app](https://fittrack-eta-six.vercel.app)
 
-## Features
+💻 **Source Code:** [GitHub Repository](https://github.com/sina-dev88/fittrack)
 
-- **Workout planning:** Create and manage training plans and generate plans based on training preferences.
-- **Workout sessions:** Track sets, weight, repetitions, and training effort, with session and rest timers.
-- **Exercise library:** Browse exercises and review their primary muscle groups and equipment.
-- **Anatomy explorer:** Explore muscle groups and related exercises through an interactive anatomy interface.
-- **Progress tracking:** Review training progress and personal records.
-- **Workout history:** Revisit completed training sessions and their recorded performance.
-- **Fitness tools:** Dedicated areas for calendar, nutrition, sleep, habits, and achievements.
-- **Bilingual interface:** English and Persian UI with RTL support for Persian.
+> **Project Status:** Actively under development. The core fitness experience is available, while some features are still being improved. The AI Coach section is currently a *Coming Soon* placeholder and does not provide AI-generated coaching.
 
-## Tech Stack
+---
 
-- **Framework:** Next.js (App Router)
-- **Language:** TypeScript
-- **UI:** React and Tailwind CSS
-- **Database:** PostgreSQL hosted on Supabase
-- **ORM:** Prisma
-- **Authentication:** Auth.js / NextAuth integration
-- **Deployment:** Vercel
+## ✨ Features
 
-## Getting Started
+### 🏋️ Workout Management
+- Create and manage personalized workout plans.
+- Generate workout plans based on training preferences.
+- Organize training schedules according to workout frequency.
+- Track workout sessions, sets, repetitions, and weights.
+- Use built-in rest timers and session timers.
+
+### 💪 Exercise Library
+- Browse a collection of fitness exercises.
+- Explore exercises by muscle groups and equipment.
+- View exercise descriptions and instructions.
+- Explore muscle anatomy through an interactive anatomy interface.
+- Discover exercises targeting specific muscle regions.
+
+### 📊 Progress Tracking
+- Monitor workout performance over time.
+- Record personal records (PRs).
+- Review workout history and completed sessions.
+- Analyze training progress and performance.
+
+### 🥗 Fitness & Lifestyle Tools
+- Nutrition tracking.
+- Sleep tracking.
+- Habit tracking.
+- Training calendar.
+- Achievement system.
+
+### 🌍 Bilingual Experience
+- English and Persian language support.
+- Full RTL layout support for Persian.
+- Localized user interface.
+
+### 🔐 Authentication & User Profiles
+- User authentication with Auth.js.
+- Personalized user profiles.
+- Fitness goals and training preferences.
+- Persistent data storage with PostgreSQL.
+
+---
+
+## 🛠 Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| Next.js | React framework and application routing |
+| TypeScript | Type-safe development |
+| React | User interface |
+| Tailwind CSS | Styling and responsive design |
+| PostgreSQL | Relational database |
+| Supabase | Managed PostgreSQL hosting |
+| Prisma ORM | Database access and schema management |
+| Auth.js / NextAuth | Authentication and session management |
+| Git & GitHub | Version control and source code management |
+| Vercel | Production deployment and hosting |
+
+---
+
+## 🚀 Live Deployment
+
+FitTrack is deployed on **Vercel** and connected to its GitHub repository.
+
+- **Production:** [Open FitTrack](https://fittrack-eta-six.vercel.app)
+- **Source Repository:** [sina-dev88/fittrack](https://github.com/sina-dev88/fittrack)
+- **Database:** PostgreSQL hosted on Supabase.
+
+The production application uses a separate database connection configuration suitable for the Vercel serverless environment.
+
+GitHub integration allows new commits pushed to the configured production branch to trigger deployments automatically.
+
+---
+
+## 💻 Getting Started
+
+Follow these instructions to run FitTrack locally.
 
 ### Prerequisites
 
-- Node.js version compatible with the project's Next.js version
+Make sure you have the following installed:
+
+- Node.js
 - npm
+- Git
 - A PostgreSQL database
-- The environment variables required by the application (see `.env.example`)
+- A Supabase project or compatible PostgreSQL instance
 
-### Installation
+### 1. Clone the Repository
 
-1. Clone the repository:
+```bash
+git clone https://github.com/sina-dev88/fittrack.git
+cd fittrack
+```
 
-   ```bash
-   git clone <YOUR_GITHUB_REPOSITORY_URL>
-   cd fittrack
-   ```
+### 2. Install Dependencies
 
-2. Install dependencies:
+```bash
+npm install
+```
 
-   ```bash
-   npm install
-   ```
+### 3. Configure Environment Variables
 
-3. Create your local environment file:
+Create a local environment file:
 
-   ```bash
-   cp .env.example .env
-   ```
+**Windows PowerShell:**
 
-   On Windows PowerShell, use:
+```powershell
+Copy-Item .env.example .env
+```
 
-   ```powershell
-   Copy-Item .env.example .env
-   ```
+**macOS / Linux:**
 
-4. Add your own database and authentication values to `.env`. Never commit `.env` or paste production secrets into issues, screenshots, or public chats.
+```bash
+cp .env.example .env
+```
 
-5. Generate the Prisma Client if it is not generated automatically by the install/build scripts:
+Add the required environment variables to your `.env` file.
 
-   ```bash
-   npx prisma generate
-   ```
+### 4. Generate Prisma Client
 
-6. Start the development server:
+```bash
+npx prisma generate
+```
 
-   ```bash
-   npm run dev
-   ```
+### 5. Start the Development Server
 
-7. Open [http://localhost:3000](http://localhost:3000).
+```bash
+npm run dev
+```
 
-> **Database note:** Use the database setup and migration workflow defined by this repository. Do not run schema-changing commands against a production database until the deployment database and migration strategy have been checked.
+### 6. Open the Application
 
-## Environment Variables
+Navigate to:
 
-Copy `.env.example` to `.env` and provide the values required by the application. The exact variable names should match the project's Prisma and authentication configuration.
+```text
+http://localhost:3000
+```
 
-For deployment, add the same required keys in **Vercel → Project → Settings → Environment Variables**. Use separate values for Production and Preview where appropriate. Do not put secret values in this README or in the Git repository.
+---
 
-## Deployment
+## 🔑 Environment Variables
 
-FitTrack is designed to be deployed to Vercel.
+FitTrack requires environment variables for database connectivity and authentication.
 
-1. Push the project to a GitHub repository.
-2. In Vercel, create a new project and import that GitHub repository.
-3. Select the project root directory and the Next.js framework preset.
-4. Add the required environment variables in the Vercel project settings.
-5. Deploy and verify authentication, database access, and the main workout flows on the production URL.
+Create a `.env` file in the project root and configure the following values:
 
-After Git integration is enabled, pushes to the configured production branch can trigger production deployments; other branches can be used for preview deployments.
+| Variable | Description |
+|---|---|
+| `DATABASE_URL` | PostgreSQL connection string used by the application |
+| `DIRECT_URL` | Direct or session-pooled PostgreSQL connection used by Prisma CLI |
+| `AUTH_SECRET` | Secret key used by Auth.js for authentication and session security |
 
-## Security Notes
+### Supabase Connection Configuration
 
-- `.env`, `.env.local`, and other files containing credentials must stay out of version control.
-- Never expose database passwords, authentication secrets, OAuth client secrets, or private API keys in client-side code.
-- Use a pooled PostgreSQL connection appropriate for serverless deployment and confirm the Prisma connection configuration before going live.
-- Use a separate Preview database when testing schema changes, so preview deployments cannot unexpectedly affect production data.
+The production environment uses Supabase PostgreSQL.
 
-## Current Limitations
+For Vercel deployments:
 
-- AI Coach is a placeholder page and is not connected to an AI service yet.
-- Some exercise descriptions and localized labels may still fall back to English when a translation is not available.
+- `DATABASE_URL`: Supabase Transaction Pooler connection string.
+- `DIRECT_URL`: Supabase Session Pooler connection string.
+- `AUTH_SECRET`: A securely generated authentication secret.
 
-## Contributing
+Never commit actual credentials, database passwords, API keys, or authentication secrets to GitHub.
 
-This is currently a personal portfolio project. Suggestions and bug reports are welcome through GitHub Issues.
+For production deployments, configure these variables through:
 
-## License
+**Vercel → Project Settings → Environment Variables**
 
-No license has been added yet. Unless a license is added to this repository, the source code is not granted an open-source reuse license.
+---
+
+## 🗄 Database & Prisma
+
+FitTrack uses PostgreSQL with Prisma ORM for database modeling and data access.
+
+The database includes models for:
+
+- Users and authentication.
+- User profiles.
+- Exercises and exercise preferences.
+- Workout plans and training schedules.
+- Workout sessions and sets.
+- Personal records.
+- Nutrition and food entries.
+- Sleep tracking.
+- Habit tracking.
+- Achievements.
+
+Prisma schema and migration files are maintained in the repository.
+
+To inspect the current migration status:
+
+```bash
+npx prisma migrate status
+```
+
+To generate Prisma Client:
+
+```bash
+npx prisma generate
+```
+
+> **Important:** Do not run schema-changing commands against the production database without reviewing the migration and backup strategy first.
+
+---
+
+## ☁️ Deployment
+
+FitTrack is deployed using Vercel with GitHub integration.
+
+To deploy your own instance:
+
+1. Fork or clone the GitHub repository.
+2. Create a Vercel account.
+3. Import the GitHub repository into Vercel.
+4. Select Next.js as the framework.
+5. Configure the required environment variables.
+6. Connect your Supabase PostgreSQL database.
+7. Deploy the application.
+
+Once GitHub integration is configured, pushing commits to the production branch can automatically trigger a new deployment.
+
+---
+
+## 🔒 Security Notes
+
+- Never commit `.env` or `.env.local` files.
+- Keep database credentials and authentication secrets private.
+- Do not expose server-side secrets in client-side code.
+- Use environment variables for sensitive configuration.
+- Keep database backups before performing production schema changes.
+- Use appropriate database connection pooling for serverless deployments.
+
+---
+
+## 🚧 Current Limitations & Future Improvements
+
+FitTrack is an ongoing project. Planned improvements include:
+
+- AI-powered workout recommendations and coaching.
+- More advanced training analytics.
+- Expanded exercise anatomy and muscle-region coverage.
+- Improved exercise descriptions and translations.
+- Additional nutrition and lifestyle features.
+- Further UI and performance improvements.
+
+**Note:** The AI Coach section is currently a placeholder and is not connected to an AI service.
+
+Some exercise descriptions or localized labels may still fall back to English when a translation is unavailable.
+
+---
+
+## 🤝 Contributing
+
+FitTrack is currently a personal portfolio project.
+
+Suggestions, feedback, and bug reports are welcome through GitHub Issues.
+
+---
+
+## 📄 License
+
+No open-source license has been added to this repository yet.
+
+Until a license is provided, the source code remains subject to the default copyright rules and is not granted an open-source reuse license.
