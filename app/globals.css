@@ -53,8 +53,11 @@ button {
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+}
+
+a:not([class]) {
+  color: inherit;
 }
 
 /* Persian typography */

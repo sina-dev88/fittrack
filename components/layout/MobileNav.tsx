@@ -15,6 +15,7 @@ import {
   Apple,
   User,
   Sparkles,
+  Settings,
   Trophy,
   X,
   CheckCircle2,
@@ -37,6 +38,7 @@ const moreNavigation = [
   { name: "habits", href: "/habits", icon: CheckCircle2 },
   { name: "achievements", href: "/achievements", icon: Trophy },
   { name: "profile", href: "/profile", icon: User },
+  { name: "settings", href: "/settings", icon: Settings },
   { name: "aiCoach", href: "/ai-coach", icon: Sparkles },
 ] as const;
 

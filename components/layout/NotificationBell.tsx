@@ -105,8 +105,7 @@ export default function NotificationBell() {
             className="fixed inset-0 z-40 cursor-default"
             onClick={() => setOpen(false)}
           />
-
-          <section className="absolute right-0 z-50 mt-3 w-[min(350px,calc(100vw-2rem))] overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-xl dark:border-zinc-800 dark:bg-zinc-950">
+          <section className="fixed inset-x-3 top-[4.5rem] z-50 mx-auto w-auto max-w-[350px] overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-xl dark:border-zinc-800 dark:bg-zinc-950 sm:absolute sm:inset-x-auto sm:right-0 sm:top-full sm:mt-3 sm:w-[350px]">
             <div className="flex items-center justify-between border-b border-zinc-200 px-4 py-3 dark:border-zinc-800">
               <h2 className="font-semibold text-zinc-900 dark:text-white">
                 Notifications
